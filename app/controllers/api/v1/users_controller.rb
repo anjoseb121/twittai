@@ -13,6 +13,10 @@ module Api
         render json: @user
       end
 
+      def followers
+        render json: @user.followers
+      end
+
       def follow
         if @user.following?(@user_destination)
           render json: { message: 'Already following' }, status: :unprocessable_entity
