@@ -3,7 +3,6 @@
 module Api
   module V1
     class UsersController < ApiController
-
       respond_to :json
 
       before_action :set_user
