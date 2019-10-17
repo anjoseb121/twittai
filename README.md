@@ -1,5 +1,10 @@
 # Twittai
 
+# Devise sign up and sign in
+
+URL: http://localhost:3000/users/sign_in  
+URL: http://localhost:3000/users/sign_up
+
 # API DOCS
 
 ## Get user information
