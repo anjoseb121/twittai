@@ -13,6 +13,12 @@ module Api
         render json: @user
       end
 
+      def timeline
+        tweets = @user.following_users.map(&:tweets).flatten
+        tweets = params['sort'] == 'recent' ? tweets.reverse : tweets
+        render json: tweets
+      end
+
       def followers
         render json: @user.followers
       end

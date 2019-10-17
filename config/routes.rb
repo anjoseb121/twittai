@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :users, only: %i[show] do
         resources :tweets, only: %i[index create]
         member do
+          get 'timeline'
           get 'followers'
           post 'follow'
           post 'unfollow'
